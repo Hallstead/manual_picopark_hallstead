@@ -33,9 +33,16 @@ class TotalCharactersToWinWith(Range):
     range_end = 50
     default = 50
 
+class RequiredSets(Range):
+    """How many sets are required to complete the randomizer?"""
+    display_name = "Required number of sets"
+    range_start = 1
+    range_end = 12
+    default = 6
 
 # This is called before any manual options are defined, in case you want to define your own with a clean slate or let Manual define over them
 def before_options_defined(options: dict) -> dict:
+    options["RequiredSets"] = RequiredSets
     return options
 
 # This is called after any manual options are defined, in case you want to see what options are defined or want to modify the defined options

@@ -39,6 +39,26 @@ def after_create_regions(world: World, multiworld: MultiWorld, player: int):
     locationNamesToRemove = [] # List of location names
     
     # Add your code here to calculate which locations to remove
+    vic_loc_list = [
+        "Clear 1 Set",
+        "Clear 2 Sets",
+        "Clear 3 Sets",
+        "Clear 4 Sets",
+        "Clear 5 Sets",
+        "Clear 6 Sets",
+        "Clear 7 Sets",
+        "Clear 8 Sets",
+        "Clear 9 Sets",
+        "Clear 10 Sets",
+        "Clear 11 Sets",
+        "Clear 12 Sets"
+    ]
+    required_set_num = get_option_value(multiworld, player, "RequiredSets")
+    vic_loc_name = vic_loc_list[required_set_num-1]
+
+    for loc in vic_loc_list:
+        if loc != vic_loc_name:
+            locationNamesToRemove.append(loc)
     
     for region in multiworld.regions:
         if region.player == player:
