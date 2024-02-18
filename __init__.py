@@ -169,9 +169,9 @@ class ManualWorld(World):
                     self.multiworld.push_precollected(starting_item)
                     pool.remove(starting_item)
 
-        pool = self.add_filler_items(pool, traps)
-
         pool = before_generate_basic(pool, self, self.multiworld, self.player)
+
+        pool = self.add_filler_items(pool, traps)
 
         # need to put all of the items in the pool so we can have a full state for placement
         # then will remove specific item placements below from the overall pool
@@ -317,7 +317,7 @@ class ManualWorld(World):
         extras = len(self.multiworld.get_unfilled_locations(player=self.player)) - len(item_pool) - 1 # subtracting 1 because of Victory; seems right
 
         if extras > 0:
-            trap_percent = get_option_value(self.multiworld, self.player, "filler_traps")
+            trap_percent = 0 #get_option_value(self.multiworld, self.player, "filler_traps")
             if not traps:
                 trap_percent = 0
 
