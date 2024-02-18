@@ -1,1 +1,15 @@
-{}
+{
+  "Set 1": {"requires": "|Set 1|"},
+  "Set 2": {"requires": "|Set 2|"},
+  "Set 3": {"requires": "|Set 3|"},
+  "Set 4": {"requires": "|Set 4|"},
+  "Set 5": {"requires": "|Set 5|"},
+  "Set 6": {"requires": "|Set 6|"},
+  "Set 7": {"requires": "|Set 7|"},
+  "Set 8": {"requires": "|Set 8|"},
+  "Set 9": {"requires": "|Set 9|"},
+  "Set 10": {"requires": "|Set 10|"},
+  "Set 11": {"requires": "|Set 11|"},
+  "Set 12": {"requires": "|Set 12|"},
+  "Victory": {}
+}
